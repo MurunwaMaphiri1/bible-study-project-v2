@@ -1,36 +1,14 @@
 import { getBlogPost, listBlogPosts } from "@/lib/blog"
 import { Metadata } from 'next/types'
+import { BookOpen } from "lucide-react"
 
 type BlogPageProps = {
     params: Promise<{ slug: string }>
 }
 
-// type BlogPostMetadata = {
-//     title: string,
-//     description: string,
-//     date: string,
-//     imageSrc: string,
-//     alt: string,
-// }
-
 export default async function BlogPage({params}: BlogPageProps) {
     const { slug } = await params
-    const { metadata, component: MDXContent } = await getBlogPost(slug)
-    // const post = await import(`@/blogs/${slug}.mdx`)
-
-    // const MDXContent = post.default 
-
-    // const metadata: BlogPostMetadata = post.metadata
-    // const title = metadata.title
-    // const description = metadata.description
-    // const date = new Date(metadata.date)
-    // const imgUrl = metadata.imageSrc
-    // const imgAlt = metadata.alt
-    // const formattedDate = new Intl.DateTimeFormat('en-ZA', {
-    //     day: 'numeric',
-    //     month: 'short',
-    //     year: 'numeric',
-    // }).format(date)
+    const { metadata, component: MDXContent, duration } = await getBlogPost(slug)
 
     return (
         <>
@@ -38,6 +16,10 @@ export default async function BlogPage({params}: BlogPageProps) {
                 <article className="mt-8">
                     <img src={metadata.imageSrc} alt={metadata.alt} className="w-full"/>
                     <h1 className="mt-5 text-[23px] font-semibold">{metadata.title}</h1>
+                    <div className="mt-2 flex flex-row gap-2">
+                        <BookOpen className="size-5 text-gray-400"/>
+                        <p className="text-sm text-gray-500">{duration}</p>
+                    </div>
                     <p className="mt-3 text-gray-400">{metadata.description}</p>
                     <hr className="mt-4 border-neutral-800"/>
                     <div className="content mt-4 text-gray-400">
