@@ -38,7 +38,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
                     <h2 className="mb-1 text-[19px] font-semibold dark:text-white">
                         {title}
                     </h2>
-                    <p className="mb-4 text-[13px] dark:text-slate-300">
+                    <p className="mb-4 text-[13px] dark:text-slate-300 line-clamp-5">
                         {Description}
                     </p>
                     <div className="flex gap-4">
