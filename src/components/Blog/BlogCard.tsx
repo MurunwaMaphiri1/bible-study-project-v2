@@ -3,8 +3,6 @@ import Link from "next/link";
 import React from "react";
 import { ArrowRight } from 'lucide-react';
 
-//text-x1
-
 interface BlogCardProps {
     imageSrc: string;
     title: string;
