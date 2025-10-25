@@ -45,7 +45,12 @@ export default function RootLayout({
       <body
         className={`${lato.variable} ${geistSans.variable} ${geistMono.variable}`}
       >
-      <ThemeProvider>
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="dark"
+        enableSystem
+        disableTransitionOnChange
+      >
         {children}
       </ThemeProvider>        
       </body>
