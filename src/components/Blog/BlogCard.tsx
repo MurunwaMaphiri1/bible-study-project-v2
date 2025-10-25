@@ -33,10 +33,10 @@ const BlogCard: React.FC<BlogCardProps> = ({
                     />
                 </div>
                 <div className="flex-1 space-y-3">
-                    <h2 className="mb-1 text-[19px] font-semibold dark:text-white">
+                    <h2 className="mb-1 text-[19px] font-semibold text-white">
                         {title}
                     </h2>
-                    <p className="mb-4 text-[13px] dark:text-slate-300 line-clamp-5">
+                    <p className="mb-4 text-[13px] text-slate-300 line-clamp-5">
                         {Description}
                     </p>
                     <div className="flex gap-4">
@@ -44,7 +44,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
                             href={path}
                             rel="noopener noreferrer"
                             aria-label={`${title} read more link`}
-                            className="group flex items-center justify-around gap-2 rounded-md bg-black/85 px-3 py-2 text-xs font-semibold text-white dark:bg-white dark:text-black"
+                            className="group flex items-center justify-around gap-2 rounded-md bg-white px-3 py-2 text-xs font-semibold text-black"
                         >
                             Read More
                             <ArrowRight className="size-4 rounded-full border border-transparent stroke-1 transition-all duration-300 ease-linear group-hover:-rotate-45 group-hover:border-slate-50 group-hover:stroke-[2px] dark:group-hover:border-slate-950"/>

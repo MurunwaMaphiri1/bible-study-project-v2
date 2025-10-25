@@ -15,7 +15,7 @@ export default async function Blogs() {
         <>
             <div className="flex flex-col gap-20 p-4 max-w-3xl mx-auto">
                 <div className="">
-                    <h1 className="font-bold text-x1">
+                    <h1 className="font-bold text-x1 text-white">
                         Blogs
                     </h1>
                     <p className="mt-2 text-[#707070]">
