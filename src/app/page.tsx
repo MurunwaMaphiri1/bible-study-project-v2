@@ -19,7 +19,7 @@ export default async function Blogs() {
                         Blogs
                     </h1>
                     <p className="mt-2 text-[#707070]">
-                        Deep dives into God's Word, sharing insights to inspire and strengthen your daily walk with Christ.
+                        Deep dives into God&apos;s Word, sharing insights to inspire and strengthen your daily walk with Christ.
                     </p>
                 </div>
                 {sortedBlogItems.map((blog, index) => (
