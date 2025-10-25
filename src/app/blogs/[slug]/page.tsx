@@ -15,7 +15,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
             <div className="mx-auto flex max-w-3xl p-4">
                 <article className="mt-8">
                     <img src={metadata.imageSrc} alt={metadata.alt} className="w-full"/>
-                    <h1 className="mt-5 text-[23px] font-semibold">{metadata.title}</h1>
+                    <h1 className="mt-5 text-[23px] font-semibold text-white">{metadata.title}</h1>
                     <div className="mt-2 flex flex-row gap-2">
                         <BookOpen className="size-5 text-gray-400"/>
                         <p className="text-sm text-gray-500">{duration}</p>
