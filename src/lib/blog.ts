@@ -1,14 +1,14 @@
-import type { Metadata } from "next";
+import type { Metadata } from 'next';
 import fs from 'node:fs/promises'
 import path from 'node:path'
-import readingDuration from "reading-duration";
+import readingDuration from 'reading-duration';
 
 export type BlogPostMetadata = Metadata & {
-    title: string,
-    description: string,
-    date: string,
-    imageSrc: string,
-    alt: string,
+    title: string
+    description: string
+    date: string
+    imageSrc: string
+    alt: string
 }
 
 export type BlogPostData = {
@@ -26,7 +26,7 @@ export const getBlogPost = async (slug: string): Promise<BlogPostData> => {
 
     const duration = readingDuration(rawContent, {
         wordsPerMinute: 100,
-        emoji: false
+        emoji: false,
     })
 
     const post = await import(`@/blogs/${slug}.mdx`)
