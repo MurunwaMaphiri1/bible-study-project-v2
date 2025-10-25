@@ -1,18 +1,18 @@
-import { getBlogPost, listBlogPosts } from "@/lib/blog"
+import { getBlogPost, listBlogPosts } from '@/lib/blog'
 import { Metadata } from 'next/types'
-import { BookOpen } from "lucide-react"
+import { BookOpen } from 'lucide-react'
 
 type BlogPageProps = {
     params: Promise<{ slug: string }>
 }
 
-export default async function BlogPage({params}: BlogPageProps) {
+export default async function BlogPage({ params }: BlogPageProps) {
     const { slug } = await params
     const { metadata, component: MDXContent, duration } = await getBlogPost(slug)
 
     return (
         <>
-            <div className="flex mx-auto max-w-3xl p-4">
+            <div className="mx-auto flex max-w-3xl p-4">
                 <article className="mt-8">
                     <img src={metadata.imageSrc} alt={metadata.alt} className="w-full"/>
                     <h1 className="mt-5 text-[23px] font-semibold">{metadata.title}</h1>

@@ -1,6 +1,6 @@
-import React from "react";
-import BlogCard from "@/components/Blog/BlogCard";
-import { listBlogPosts } from "@/lib/blog";
+import React from 'react';
+import BlogCard from '@/components/Blog/BlogCard';
+import { listBlogPosts } from '@/lib/blog';
 
 
 export default async function Blogs() {
